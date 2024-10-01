@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ahorcado {
+public class AHORCADO {
     
     public static void main(String[] args) {
         
