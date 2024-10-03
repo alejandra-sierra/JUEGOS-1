@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class AHORCADO {
+public class Ahorcado {
     
     public static void main(String[] args) {
         
@@ -16,21 +16,24 @@ public class AHORCADO {
 
 //GUIONES
 
-        int letras = palabraSecreta.length();
+        int letras = palabraSecreta.length();// medir numero de letras
+        //sustitucion de letras por guiones
         char [] guiones = new char [letras];
         for (int i=0; i<guiones.length; i++)
             {guiones[i]= '_';}
         
 
-    boolean fin = false;
-    int intentos=6;
+    boolean fin = false;//control de si el juego a terminado
+    int intentos=6;//cuenta de intentos 
 
-    while (!fin && intentos>0) 
+    while (!fin && intentos>0) //mientras que el juego no termine se ejecutara elte bucle
     {
+    //estado del juego
     System.out.println(guiones);
     dibujo (intentos);
     System.out.println("Introduce una letra");
 
+    
     char intento =scanner.next().charAt(0); //devuelve el carácter ubicado en el índice especificado de String. 
     boolean acierto=false;
 
@@ -64,7 +67,7 @@ public class AHORCADO {
 
 
 
-
+//para comprobar si se ha ganado el juego comprobando si quedan guiones
 static boolean continuidad (char [] array) {
 
     for (char a:array) 
@@ -73,7 +76,8 @@ static boolean continuidad (char [] array) {
         {return true;}
     }
     return false;}
-    
+ 
+//basandose en el numero de intentos que quedan se hace cada dibujo
 static void dibujo (int intentos){
 
 switch (intentos){

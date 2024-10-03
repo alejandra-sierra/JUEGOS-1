@@ -21,29 +21,32 @@ public class AdivinaElNumero {
         
         private void jugarPartida(){
 
-                int aleatorio = (int) (Math.random()*100) + 1;
+                int aleatorio = (int) (Math.random()*100) + 1;//eleccion de numero aleatorio entre 0 y 100
 
+
+                //contadores
                 int intento =0;
         
                 int errores =0;
                 
                 while (aleatorio!=intento)
                 {
-
+                    //scanner para el jugador
                     System.out.println("Que numero crees que es (entre 0 y 100)?");
                     intento = scanner.nextInt();
                     errores++;
             
-                    if (intento>100)
+                    if (intento>100)//comprobar que no se mayor de 100
                         {System.out.println("ERROR. El numero esta entre 0 y 100");}
-                    else if (intento>aleatorio)
+                    else if (intento>aleatorio)//si es menor delvolver info
                         {System.out.println("Numero es menor");}
-                    else if (intento<aleatorio)
+                    else if (intento<aleatorio)//si es mayor devolver info
                         {System.out.println ("Numero es mayor");}
-                    else
+                    else//jugador acierta
                         {System.out.println ("Enhorabuena el numero es " + intento + " has usado "+ errores+" intentos para adivinar el numero");}
                 }
             }
+            //reinicio de juego
             private void preguntarReiniciar() {
                 scanner.nextLine(); // Consume the newline left-over
                 System.out.println("¿Quieres jugar otra vez? (si o no)");
